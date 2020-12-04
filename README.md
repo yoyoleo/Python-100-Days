@@ -198,17 +198,7 @@ Python在以下领域都有用武之地。
 ### Day36~40 - [数据库基础和进阶](./Day36-40)
 
 - [关系型数据库MySQL](./Day36-40/36-38.关系型数据库MySQL.md)
-  - 关系型数据库概述
-  - MySQL的安装和使用
-  - SQL的使用
-    - DDL - 数据定义语言 - create / drop / alter
-    - DML - 数据操作语言 - insert / delete / update / select
-    - DCL - 数据控制语言 - grant / revoke
-  - 相关知识
-    - 范式理论 - 设计二维表的指导思想
-    - 数据完整性
-    - 数据一致性
-  - 在Python中操作MySQL
+- 在Python中操作MySQL
 - [NoSQL数据库入门](./Day36-40/39-40.NoSQL数据库入门.md)
   - NoSQL概述
   - Redis概述
@@ -409,117 +399,15 @@ Python在以下领域都有用武之地。
 #### 第91天：[团队项目开发的问题和解决方案](./Day91-100/91.团队项目开发的问题和解决方案.md)
 
 1. 软件过程模型
-   - 经典过程模型（瀑布模型）
-     - 可行性分析（研究做还是不做），输出《可行性分析报告》。
-     - 需求分析（研究做什么），输出《需求规格说明书》和产品界面原型图。
-     - 概要设计和详细设计，输出概念模型图（ER图）、物理模型图、类图、时序图等。
-     - 编码 / 测试。
-     - 上线 / 维护。
-
-     瀑布模型最大的缺点是无法拥抱需求变化，整套流程结束后才能看到产品，团队士气低落。
-   - 敏捷开发（Scrum）- 产品所有者、Scrum Master、研发人员 - Sprint
-     - 产品的Backlog（用户故事、产品原型）。
-     - 计划会议（评估和预算）。
-     - 日常开发（站立会议、番茄工作法、结对编程、测试先行、代码重构……）。
-     - 修复bug（问题描述、重现步骤、测试人员、被指派人）。
-     - 发布版本。
-     - 评审会议（Showcase，用户需要参与）。
-     - 回顾会议（对当前迭代周期做一个总结）。
-
-     > 补充：敏捷软件开发宣言
-     >
-     > - **个体和互动** 高于 流程和工具
-     > - **工作的软件** 高于 详尽的文档
-     > - **客户合作** 高于 合同谈判
-     > - **响应变化** 高于 遵循计划
-
-     ![](./res/agile-scrum-sprint-cycle.png)
-
-     > 角色：产品所有者（决定做什么，能对需求拍板的人）、团队负责人（解决各种问题，专注如何更好的工作，屏蔽外部对开发团队的影响）、开发团队（项目执行人员，具体指开发人员和测试人员）。
-
-     > 准备工作：商业案例和资金、合同、憧憬、初始产品需求、初始发布计划、入股、组建团队。
-
-     >  敏捷团队通常人数为8-10人。
-
-     >  工作量估算：将开发任务量化，包括原型、Logo设计、UI设计、前端开发等，尽量把每个工作分解到最小任务量，最小任务量标准为工作时间不能超过两天，然后估算总体项目时间。把每个任务都贴在看板上面，看板上分三部分：to do（待完成）、in progress（进行中）和done（已完成）。
-
 2. 项目团队组建
-
-   - 团队的构成和角色
-
-     > 说明：谢谢**付祥英**女士帮助我绘制了下面这张精美的公司组织架构图。
-
-     ![company_architecture](./res/company_architecture.png)
-
-   - 编程规范和代码审查（flake8、pylint）
-
-     ![](./res/pylint.png)
-
-   - Python中的一些“惯例”（请参考[《Python惯例-如何编写Pythonic的代码》](Python惯例.md)）
-
-   - 影响代码可读性的原因：
-
-     - 代码注释太少或者没有注释
-     - 代码破坏了语言的最佳实践
-     - 反模式编程（意大利面代码、复制-黏贴编程、自负编程、……）
-
 3. 团队开发工具介绍
-   - 版本控制：Git、Mercury
-   - 缺陷管理：[Gitlab](https://about.gitlab.com/)、[Redmine](http://www.redmine.org.cn/)
-   - 敏捷闭环工具：[禅道](https://www.zentao.net/)、[JIRA](https://www.atlassian.com/software/jira/features)
-   - 持续集成：[Jenkins](https://jenkins.io/)、[Travis-CI](https://travis-ci.org/)
-
-   请参考[《团队项目开发的问题和解决方案》](Day91-100/91.团队项目开发的问题和解决方案.md)。
 
 ##### 项目选题和理解业务
 
 1. 选题范围设定
-
-   - CMS（用户端）：新闻聚合网站、问答/分享社区、影评/书评网站等。
-   - MIS（用户端+管理端）：KMS、KPI考核系统、HRS、CRM系统、供应链系统、仓储管理系统等。
-
-   - App后台（管理端+数据接口）：二手交易类、报刊杂志类、小众电商类、新闻资讯类、旅游类、社交类、阅读类等。
-   - 其他类型：自身行业背景和工作经验、业务容易理解和把控。
-
 2. 需求理解、模块划分和任务分配
-
-   - 需求理解：头脑风暴和竞品分析。
-   - 模块划分：画思维导图（XMind），每个模块是一个枝节点，每个具体的功能是一个叶节点（用动词表述），需要确保每个叶节点无法再生出新节点，确定每个叶子节点的重要性、优先级和工作量。
-   - 任务分配：由项目负责人根据上面的指标为每个团队成员分配任务。
-
-   ![](./res/requirements_by_xmind.png)
-
 3. 制定项目进度表（每日更新）
-
-   | 模块 | 功能     | 人员   | 状态     | 完成 | 工时 | 计划开始 | 实际开始 | 计划结束 | 实际结束 | 备注             |
-   | ---- | -------- | ------ | -------- | ---- | ---- | -------- | -------- | -------- | -------- | ---------------- |
-   | 评论 | 添加评论 | 王大锤 | 正在进行 | 50%  | 4    | 2018/8/7 |          | 2018/8/7 |          |                  |
-   |      | 删除评论 | 王大锤 | 等待     | 0%   | 2    | 2018/8/7 |          | 2018/8/7 |          |                  |
-   |      | 查看评论 | 白元芳 | 正在进行 | 20%  | 4    | 2018/8/7 |          | 2018/8/7 |          | 需要进行代码审查 |
-   |      | 评论投票 | 白元芳 | 等待     | 0%   | 4    | 2018/8/8 |          | 2018/8/8 |          |                  |
-
 4. OOAD和数据库设计
-
-  - UML（统一建模语言）的类图
-
-    ![uml](./res/uml-class-diagram.png)
-
-  - 通过模型创建表（正向工程）
-
-    ```Shell
-    python manage.py makemigrations app
-    python manage.py migrate
-    ```
-
-  - 使用PowerDesigner绘制物理模型图。
-
-    ![](./res/power-designer-pdm.png)
-
-  - 通过数据表创建模型（反向工程）
-
-    ```Shell
-    python manage.py inspectdb > app/models.py
-    ```
 
 #### 第92天：[Docker容器详解](./Day91-100/92.Docker容器详解.md)
 
@@ -536,68 +424,7 @@ Python在以下领域都有用武之地。
 
 #### 第95天：[使用Django开发商业项目](./Day91-100/95.使用Django开发商业项	目.md)
 
-##### 项目开发中的公共问题
-
-1. 数据库的配置（多数据库、主从复制、数据库路由）
-2. 缓存的配置（分区缓存、键设置、超时设置、主从复制、故障恢复（哨兵））
-3. 日志的配置
-4. 分析和调试（Django-Debug-ToolBar）
-5. 好用的Python模块（日期计算、图像处理、数据加密、三方API）
-
-##### REST API设计
-
-1. RESTful架构
-   - [理解RESTful架构](http://www.ruanyifeng.com/blog/2011/09/restful.html)
-   - [RESTful API设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
-   - [RESTful API最佳实践](http://www.ruanyifeng.com/blog/2018/10/restful-api-best-practices.html)
-2. API接口文档的撰写
-   - [RAP2](http://rap2.taobao.org/)
-   - [YAPI](http://yapi.demo.qunar.com/)
-3. [django-REST-framework](https://www.django-rest-framework.org/)的应用
-
-##### 项目中的重点难点剖析
-
-1. 使用缓存缓解数据库压力 - Redis
-2. 使用消息队列做解耦合和削峰 - Celery + RabbitMQ
-
 #### 第96天：[软件测试和自动化测试](Day91-100/96.软件测试和自动化测试.md)
-
-##### 单元测试
-
-1. 测试的种类
-2. 编写单元测试（unittest、pytest、nose2、tox、ddt、……）
-3. 测试覆盖率（coverage）
-
-##### 项目部署
-
-1. 部署前的准备工作
-   - 关键设置（SECRET_KEY / DEBUG / ALLOWED_HOSTS / 缓存 / 数据库）
-   - HTTPS / CSRF_COOKIE_SECUR  / SESSION_COOKIE_SECURE  
-   - 日志相关配置
-2. Linux常用命令回顾
-3. Linux常用服务的安装和配置
-4. uWSGI/Gunicorn和Nginx的使用
-   - Gunicorn和uWSGI的比较
-     - 对于不需要大量定制化的简单应用程序，Gunicorn是一个不错的选择，uWSGI的学习曲线比Gunicorn要陡峭得多，Gunicorn的默认参数就已经能够适应大多数应用程序。
-     - uWSGI支持异构部署。
-     - 由于Nginx本身支持uWSGI，在线上一般都将Nginx和uWSGI捆绑在一起部署，而且uWSGI属于功能齐全且高度定制的WSGI中间件。
-     - 在性能上，Gunicorn和uWSGI其实表现相当。
-5. 使用虚拟化技术（Docker）部署测试环境和生产环境
-
-##### 性能测试
-
-1. AB的使用
-2. SQLslap的使用
-3. sysbench的使用
-
-##### 自动化测试
-
-1. 使用Shell和Python进行自动化测试
-2. 使用Selenium实现自动化测试
-   - Selenium IDE
-   - Selenium WebDriver
-   - Selenium Remote Control
-3. 测试工具Robot Framework介绍
 
 #### 第97天：[电商网站技术要点剖析](./Day91-100/97.电商网站技术要点剖析.md)
 
@@ -617,4 +444,3 @@ Python在以下领域都有用武之地。
 #### 第99天：[面试中的公共问题](./Day91-100/99.面试中的公共问题.md)
 
 #### 第100天：[Python面试题实录](./Day91-100/100.Python面试题实录.md)
-
